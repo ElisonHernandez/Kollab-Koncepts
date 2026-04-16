@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Panel Administrador</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><h1>Panel Administrador</h1></header>
+<nav>
+<a href="admin.html">Inicio Admin</a>
+<a href="perfil-admin.html">Mi Perfil</a>
+<a href="login-admin.html" style="float:right;color:#ec7063;">Cerrar sesión</a>
+</nav>
+<main>
+    <!-- 1. Asignar y gestionar casos -->
+    <h2>Gestión de Asignaciones</h2>
+    <table>
+        <tr>
+            <th>ID Ticket</th>
+            <th>Asignar Técnico</th>
+            <th>Prioridad</th>
+            <th>Acción</th>
+        </tr>
+        <tr>
+            <td>001</td>
+            <td>
+                <select>
+                    <option>Técnico 1</option>
+                    <option selected>Técnico 2</option>
+                </select>
+            </td>
+            <td>
+                <select>
+                    <option>Alta</option>
+                    <option selected>Media</option>
+                    <option>Baja</option>
+                </select>
+            </td>
+            <td><button>Asignar</button></td>
+        </tr>
+    </table>
+
+    <!-- 2. Administración de usuarios -->
+    <h2>Gestión de Usuarios</h2>
+    <table>
+        <tr>
+            <th>Nombre</th><th>Email</th><th>Rol</th><th>Acción</th>
+        </tr>
+        <tr>
+            <td>Juana Ramírez</td>
+            <td>juana@kollab.com</td>
+            <td>Técnico</td>
+            <td>
+                <button>Editar</button> 
+                <button>Eliminar</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Mario López</td>
+            <td>mario@kollab.com</td>
+            <td>Administrador</td>
+            <td>
+                <button>Editar</button>
+                <button>Eliminar</button>
+            </td>
+        </tr>
+    </table>
+    <button>Agregar Usuario</button>
+
+    <!-- 3. Reportes/KPI -->
+    <h2>Reportes (KPIs)</h2>
+    <ul>
+        <li><b>Total de tickets:</b> 12</li>
+        <li><b>Tickets abiertos:</b> 5</li>
+        <li><b>Tickets cerrados:</b> 4</li>
+        <li><b>Tiempo promedio de resolución:</b> 12h</li>
+        <!-- Más métricas según lo necesites -->
+    </ul>
+
+    <!-- 4. Configuración de notificaciones/categorías -->
+    <h2>Configuración</h2>
+    <form>
+        <label>Notificaciones por email:
+            <select>
+                <option>Activadas</option>
+                <option>Desactivadas</option>
+            </select>
+        </label>
+        <label>Nueva categoría:
+            <input type="text" placeholder="ej. Garantía, Soporte remoto">
+        </label>
+        <button>Guardar Configuración</button>
+    </form>
+</main>
+</body>
+</html>
