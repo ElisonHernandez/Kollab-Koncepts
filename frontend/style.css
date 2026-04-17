@@ -25,9 +25,21 @@ body {
 h1, h2, h3 {
     font-weight: 700;
 }
-h1 { font-size: 2em; margin: 0.7em 0 0.4em;}
-h2 { font-size: 1.4em; margin: 1.2em 0 0.6em;}
-h3 { font-size: 1.13em; margin: 1em 0 0.6em; }
+
+h1 {
+    font-size: 2em;
+    margin: 0.7em 0 0.4em;
+}
+
+h2 {
+    font-size: 1.4em;
+    margin: 1.2em 0 0.6em;
+}
+
+h3 {
+    font-size: 1.13em;
+    margin: 1em 0 0.6em;
+}
 
 p, label, th, td {
     font-size: 1em;
@@ -52,21 +64,21 @@ nav {
     gap: 12px;
 }
 
-nav a {
-    color: var(--blanco);
-    margin-right: 8px;
-    text-decoration: none;
-    padding: 8px 18px;
-    border-radius: 8px;
-    font-weight: 600;
-    transition: background .18s, color .18s;
-}
+    nav a {
+        color: var(--blanco);
+        margin-right: 8px;
+        text-decoration: none;
+        padding: 8px 18px;
+        border-radius: 8px;
+        font-weight: 600;
+        transition: background .18s, color .18s;
+    }
 
-nav a:hover,
-nav a.active {
-    background: var(--rojo-corporativo);
-    color: #fff;
-}
+        nav a:hover,
+        nav a.active {
+            background: var(--rojo-corporativo);
+            color: #fff;
+        }
 
 /* ===========================
    Main content
@@ -83,7 +95,9 @@ main {
 }
 
 @media (max-width: 700px) {
-    main { padding: 17px 2vw; }
+    main {
+        padding: 17px 2vw;
+    }
 }
 
 /* ===========================
@@ -97,6 +111,7 @@ form {
     gap: 14px;
     background: transparent;
 }
+
 label {
     font-weight: 600;
     margin-bottom: 3px;
@@ -114,9 +129,10 @@ input[type="text"], input[type="email"], input[type="password"], input[type="fil
     outline: none;
     transition: border .19s;
 }
-input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus, select:focus {
-    border: 1.5px solid var(--rojo-corporativo);
-}
+
+    input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus, select:focus {
+        border: 1.5px solid var(--rojo-corporativo);
+    }
 
 button {
     background: var(--rojo-corporativo);
@@ -131,9 +147,9 @@ button {
     font-size: 1em;
 }
 
-button:hover {
-    background: #991418;
-}
+    button:hover {
+        background: #991418;
+    }
 
 /* ===========================
    Tablas
@@ -147,16 +163,19 @@ table {
     overflow: hidden;
     box-shadow: 0 2px 8px #0001;
 }
+
 th, td {
     border: 1px solid var(--borde);
     padding: 12px 11px;
     text-align: center;
 }
+
 th {
     background: #f4f4f4;
     font-weight: 700;
     color: var(--gris-oscuro);
 }
+
 tr:nth-child(even) {
     background: #fbfbfb;
 }
@@ -173,6 +192,7 @@ tr:nth-child(even) {
     box-shadow: var(--sombra);
     text-align: center;
 }
+
 .login-logo {
     width: 115px;
     margin-bottom: 12px;
@@ -187,9 +207,10 @@ a {
     text-decoration: none;
     font-weight: 500;
 }
-a:hover {
-    text-decoration: underline;
-}
+
+    a:hover {
+        text-decoration: underline;
+    }
 
 input[type="file"] {
     background: transparent;
@@ -210,14 +231,17 @@ textarea {
     display: inline-block;
     font-size: 1em;
 }
+
 .estado-abierto {
     background: #eaf2fc;
     color: #2278D0;
 }
+
 .estado-proceso {
     background: #fcf6e2;
     color: #eda900;
 }
+
 .estado-cerrado {
     background: #e6f9f0;
     color: #19b06e;
@@ -235,8 +259,21 @@ textarea {
 
 /* Responsive para móvil */
 @media (max-width: 570px) {
-    main { padding: 10px 1vw; }
-    .login-container, form { max-width: 95vw; }
-    table, th, td { font-size: 0.96em; }
-    nav { flex-wrap: wrap; gap:4px;padding:8px 3vw;}
+    main {
+        padding: 10px 1vw;
+    }
+
+    .login-container, form {
+        max-width: 95vw;
+    }
+
+    table, th, td {
+        font-size: 0.96em;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 4px;
+        padding: 8px 3vw;
+    }
 }

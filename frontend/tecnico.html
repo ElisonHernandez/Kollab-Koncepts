@@ -1,36 +1,126 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Panel Técnico</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Panel Técnico</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Tarjeta de tickets */
+        .ticket-card {
+            background: rgba(255,255,255,0.08);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 0 12px rgba(0,224,255,0.3);
+            margin-bottom: 25px;
+        }
+
+        /* Estados */
+        .ticket-abierto {
+            border: 2px solid #c0392b;
+            background: #ffebeb;
+            color: #c0392b;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+
+        .ticket-proceso {
+            border: 2px solid #e67e22;
+            background: #fff5e6;
+            color: #e67e22;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+
+        .ticket-cerrado {
+            border: 2px solid #27ae60;
+            background: #eaf9f0;
+            color: #27ae60;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+
+        /* Tabla */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+            table th, table td {
+                padding: 12px;
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+            }
+
+            table th {
+                background: rgba(0,0,0,0.1);
+                font-weight: bold;
+            }
+    </style>
 </head>
 <body>
-<header><h1>Panel Técnico</h1></header>
-<nav>
-<a href="tecnico.html">Panel</a>
-<a href="perfil-tecnico.html">Mi Perfil</a>
-<a href="login-cliente.html" style="float:right;color:#ec7063;">Cerrar sesión</a>
-</nav>
-<main>
-    <h2>Gestión de Tickets</h2>
-    <table>
-        <tr>
-            <th>ID</th><th>Asunto</th><th>Estado</th><th>Actualizar Estado</th>
-        </tr>
-        <tr>
-            <td>001</td><td>Equipo no enciende</td>
-            <td>En proceso</td>
-            <td>
-                <select>
-                    <option>Abierto</option>
-                    <option selected>En proceso</option>
-                    <option>Cerrado</option>
-                </select>
-                <button>Actualizar</button>
-            </td>
-        </tr>
-    </table>
-</main>
+    <header><h1>Panel Técnico</h1></header>
+    <nav>
+        <a href="tecnico.html">Panel</a>
+        <a href="perfil-tecnico.html">Mi Perfil</a>
+        <a href="login-cliente.html" style="float:right;color:#ec7063;">Cerrar sesión</a>
+    </nav>
+    <main>
+        <h2>Gestión de Tickets</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Asunto</th>
+                    <th>Estado</th>
+                    <th>Actualizar Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>001</td>
+                    <td>Equipo no enciende</td>
+                    <td><span class="ticket-proceso">En Proceso</span></td>
+                    <td>
+                        <select>
+                            <option>Abierto</option>
+                            <option selected>En Proceso</option>
+                            <option>Cerrado</option>
+                        </select>
+                        <button>Actualizar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>002</td>
+                    <td>Pantalla dañada</td>
+                    <td><span class="ticket-abierto">Abierto</span></td>
+                    <td>
+                        <select>
+                            <option selected>Abierto</option>
+                            <option>En Proceso</option>
+                            <option>Cerrado</option>
+                        </select>
+                        <button>Actualizar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>003</td>
+                    <td>Actualización de software</td>
+                    <td><span class="ticket-cerrado">Cerrado</span></td>
+                    <td>
+                        <select>
+                            <option>Abierto</option>
+                            <option>En Proceso</option>
+                            <option selected>Cerrado</option>
+                        </select>
+                        <button>Actualizar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
 </body>
 </html>

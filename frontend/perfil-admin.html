@@ -1,26 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Perfil Administrador</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Perfil Administrador</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header><h1>Perfil Administrador</h1></header>
-<nav>
-<a href="admin.html">Inicio Admin</a>
-<a href="perfil-admin.html" class="active">Mi Perfil</a>
-<a href="login-admin.html" style="float:right;color:#ec7063;">Cerrar sesión</a>
-</nav>
-<main>
-    <h2>Datos del Administrador</h2>
-    <p>Bienvenido al perfil del administrador. Aquí puedes revisar tu información y acceder a opciones de gestión.</p>
-    <section>
-        <h3>Información</h3>
-        <p><strong>Nombre:</strong> Administrador</p>
-        <p><strong>Rol:</strong> Administrador</p>
-        <p><strong>Email:</strong> admin@kollabkoncepts.com</p>
-    </section>
-</main>
+    <header><h1>Perfil Administrador</h1></header>
+    <nav>
+        <a href="admin.html">Inicio Admin</a>
+        <a href="perfil-admin.html" class="active">Mi Perfil</a>
+        <a href="login-admin.html" style="float:right;color:#ec7063;">Cerrar sesión</a>
+    </nav>
+    <main>
+        <h2>Datos del Administrador</h2>
+        <p>Bienvenido al perfil del administrador. Aquí puedes revisar tu información y acceder a opciones de gestión.</p>
+
+        <section>
+            <h3>Información</h3>
+            <p><strong>Nombre:</strong> Administrador</p>
+            <p><strong>Rol:</strong> Administrador</p>
+            <p><strong>Email:</strong> admin@kollabkoncepts.com</p>
+            <p><strong>Último acceso:</strong> 16/04/2026 - 18:30</p>
+        </section>
+
+        <section style="margin-top:25px;">
+            <h3>Estadísticas rápidas</h3>
+            <div style="display:flex;gap:20px;flex-wrap:wrap;">
+                <div class="prioridad-alta">Tickets gestionados hoy: 12</div>
+                <div class="prioridad-media">Usuarios activos: 34</div>
+                <div class="prioridad-general">Técnicos asignados: 8</div>
+            </div>
+        </section>
+
+        <section style="margin-top:25px;">
+            <h3>Accesos de Gestión</h3>
+            <ul>
+                <li><a href="gestion-tecnicos.html">Gestionar Técnicos</a></li>
+                <li><a href="gestion-clientes.html">Gestionar Clientes</a></li>
+                <li><a href="gestion-usuarios.html">Gestionar Usuarios</a></li>
+                <li><a href="reportes-admin.html">Ver Reportes Generales</a></li>
+            </ul>
+        </section>
+    </main>
 </body>
 </html>

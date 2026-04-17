@@ -1,40 +1,75 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Mis Tickets</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Reportes de Tickets</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header><h1>Mis Tickets</h1></header>
-<nav>
-<a href="dashboard.html">Inicio</a>
-<a href="crear.html">Crear Ticket</a>
-<a href="login-cliente.html" style="float:right;color:#ec7063;">Cerrar sesión</a>
-</nav>
-<main>
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>Estado</th>
-            <th>Acción</th>
-        </tr>
-        <tr>
-            <td>001</td>
-            <td>En proceso</td>
-            <td><a href="detalle.html">Ver</a></td>
-        </tr>
-        <tr>
-            <td>002</td>
-            <td>Abierto</td>
-            <td><a href="detalle.html">Ver</a></td>
-        </tr>
-        <tr>
-            <td>003</td>
-            <td>Cerrado</td>
-            <td><a href="detalle.html">Ver</a></td>
-        </tr>
-    </table>
-</main>
+    <header><h1>Reportes de Tickets</h1></header>
+    <nav>
+        <a href="dashboard.html">Inicio</a>
+        <a href="crear.html">Crear Ticket</a>
+        <a href="reportes.html" class="active">Reportes</a>
+        <a href="perfil-cliente.html">Mi Perfil</a>
+        <a href="login-cliente.html" style="float:right;color:#ec7063;">Cerrar sesión</a>
+    </nav>
+    <main>
+        <h2>Resumen General</h2>
+        <p>Visualiza el estado actual de tus tickets y métricas clave.</p>
+
+        <section style="display:flex;flex-wrap:wrap;gap:20px;margin-top:20px;">
+            <div class="prioridad-alta">Tickets Abiertos: 5</div>
+            <div class="prioridad-media">En Proceso: 3</div>
+            <div class="prioridad-general">Cerrados: 12</div>
+        </section>
+
+        <h3 style="margin-top:30px;">Listado de Tickets</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nº Ticket</th>
+                    <th>Cliente</th>
+                    <th>Asunto</th>
+                    <th>Estado</th>
+                    <th>Prioridad</th>
+                    <th>Fecha</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>#TK-045</td>
+                    <td>Mario López</td>
+                    <td>Problema con impresora</td>
+                    <td class="prioridad-alta">Abierto</td>
+                    <td>Alta</td>
+                    <td>16/04/2026</td>
+                </tr>
+                <tr>
+                    <td>#TK-044</td>
+                    <td>Laura Mora</td>
+                    <td>Actualización de software</td>
+                    <td class="prioridad-media">En Proceso</td>
+                    <td>Media</td>
+                    <td>15/04/2026</td>
+                </tr>
+                <tr>
+                    <td>#TK-043</td>
+                    <td>Carlos Vega</td>
+                    <td>Equipo no enciende</td>
+                    <td class="prioridad-general">Cerrado</td>
+                    <td>Baja</td>
+                    <td>14/04/2026</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <section style="margin-top:30px;">
+            <h3>Estadísticas</h3>
+            <p>Tiempo promedio de cierre: <strong>4.2 días</strong></p>
+            <p>Total de tickets gestionados: <strong>20</strong></p>
+        </section>
+    </main>
 </body>
 </html>

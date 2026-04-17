@@ -1,24 +1,81 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Detalle de Ticket</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Detalle de Ticket</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .ticket-card {
+            background: rgba(255,255,255,0.08);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 0 12px rgba(0,224,255,0.3);
+            margin-bottom: 25px;
+        }
+
+        .ticket-estado {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-weight: 700;
+        }
+
+        .ticket-abierto {
+            background: #ffebeb;
+            color: #c0392b;
+            border: 2px solid #c0392b;
+        }
+
+        .ticket-proceso {
+            background: #fff5e6;
+            color: #e67e22;
+            border: 2px solid #e67e22;
+        }
+
+        .ticket-cerrado {
+            background: #eaf9f0;
+            color: #27ae60;
+            border: 2px solid #27ae60;
+        }
+
+        .comentarios {
+            margin-top: 25px;
+        }
+
+            .comentarios textarea {
+                width: 100%;
+                min-height: 80px;
+                border-radius: 8px;
+                border: 1.5px solid #ccc;
+                padding: 10px;
+                resize: vertical;
+            }
+
+            .comentarios button {
+                margin-top: 10px;
+                width: 100%;
+            }
+    </style>
 </head>
 <body>
-<header><h1>Detalle del Ticket</h1></header>
-<nav>
-<a href="reportes.html">Volver a Mis Tickets</a>
-<a href="login-cliente.html" style="float:right;color:#ec7063;">Cerrar sesión</a>
-</nav>
-<main>
-    <p><strong>ID:</strong> 001</p>
-    <p><strong>Estado:</strong> En proceso</p>
-    <p><strong>Creado:</strong> 16/04/2026</p>
-    <p><strong>Descripción:</strong> Equipo no enciende</p>
-    <h3>Comentarios</h3>
-    <textarea placeholder="Añade un comentario"></textarea>
-    <button>Enviar</button>
-</main>
+    <header><h1>Detalle del Ticket</h1></header>
+    <nav>
+        <a href="reportes.html">Volver a Mis Tickets</a>
+        <a href="login-cliente.html" style="float:right;color:#ec7063;">Cerrar sesión</a>
+    </nav>
+    <main>
+        <div class="ticket-card">
+            <p><strong>ID:</strong> 001</p>
+            <p><strong>Estado:</strong> <span class="ticket-proceso">En Proceso</span></p>
+            <p><strong>Creado:</strong> 16/04/2026</p>
+            <p><strong>Descripción:</strong> Equipo no enciende</p>
+        </div>
+
+        <div class="comentarios">
+            <h3>Comentarios</h3>
+            <textarea placeholder="Añade un comentario"></textarea>
+            <button>Enviar</button>
+        </div>
+    </main>
 </body>
 </html>

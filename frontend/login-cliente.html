@@ -1,22 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Login - Cliente</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Registro - Cliente</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="login-container">
-    <img class="login-logo" src="logo/logo.png" alt="Logo Kollab Koncepts">
-    <h1>Iniciar Sesión (Cliente)</h1>
-    <form onsubmit="window.location='dashboard.html'; return false;">
-        <label>Email:</label>
-        <input type="email" required>
-        <label>Contraseña:</label>
-        <input type="password" required>
-        <button type="submit" style="width:100%;margin-top:.5em;">Ingresar</button>
-    </form>
-    <a href="login-admin.html">Ingresar como Administrador</a>
-</div>
+    <div class="login-container">
+        <img class="login-logo" src="logo/logo.png" alt="Logo Kollab Koncepts">
+        <h1>Registro de Cliente</h1>
+        <form onsubmit="window.location='dashboard.html'; return false;">
+            <label>Nombre:</label>
+            <input type="text" required>
+
+            <label>Correo:</label>
+            <input type="email" required>
+
+            <label>Empresa:</label>
+            <input type="text" required>
+
+            <label>Número personal:</label>
+            <input type="text" required>
+
+            <label>Número empresa:</label>
+            <input type="text" required>
+
+            <label>Correo empresa:</label>
+            <input type="email" required>
+
+            <button type="submit" style="width:100%;margin-top:.5em;">Registrar</button>
+        </form>
+        <a href="login-admin.html">Ingresar como Administrador</a>
+    </div>
 </body>
 </html>
